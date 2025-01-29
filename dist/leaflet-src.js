@@ -1,5 +1,5 @@
 /* @preserve
- * Leaflet 1.9.4+v1.2dd50f9, a JS library for interactive maps. https://leafletjs.com
+ * Leaflet 1.9.4+v1.cfa393d, a JS library for interactive maps. https://leafletjs.com
  * (c) 2010-2025 Vladimir Agafonkin, (c) 2010-2011 CloudMade
  */
 
