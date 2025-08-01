@@ -35,6 +35,7 @@
   "main": "dist/leaflet-src.js",
   "module": "dist/leaflet-src.esm.js",
   "style": "dist/leaflet.css",
+  "types": "leaflet.d.ts",
   "files": [
     "dist",
     "src",
