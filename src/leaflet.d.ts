@@ -3153,3 +3153,8 @@ export const stamp: typeof Util["stamp"];
 export const setOptions: typeof Util["setOptions"];
 
 export function noConflict(): any;
+
+// Global declaration for traditional usage
+declare global {
+    const L: typeof import('./leaflet.d.ts');
+}
