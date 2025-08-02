@@ -36,18 +36,6 @@
   "module": "dist/leaflet-src.esm.js",
   "style": "dist/leaflet.css",
   "types": "dist/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/leaflet-src.esm.js",
-      "require": "./dist/leaflet-src.js",
-      "types": "./dist/index.d.ts"
-    },
-    "./css": "./dist/leaflet.css",
-    "./dist/leaflet.css": "./dist/leaflet.css",
-    "./dist/leaflet.js": "./dist/leaflet.js",
-    "./dist/leaflet-src.js": "./dist/leaflet-src.js",
-    "./dist/leaflet-src.esm.js": "./dist/leaflet-src.esm.js"
-  },
   "files": [
     "dist",
     "src",
