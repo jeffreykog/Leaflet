@@ -28,7 +28,6 @@ const outro = `if (typeof window !== 'undefined') {
 const copyTypesPlugin = {
 	name: 'copy-types',
 	writeBundle() {
-		// Copy main leaflet definitions
 		const sourceFile = 'src/leaflet.d.ts';
 		const targetFile = 'dist/leaflet.d.ts';
 
@@ -37,17 +36,6 @@ const copyTypesPlugin = {
 			console.log(`Copied ${sourceFile} to ${targetFile}`);
 		} else {
 			console.warn(`Warning: ${sourceFile} not found`);
-		}
-
-		// Copy index file for bundler compatibility
-		const indexSourceFile = 'src/index.d.ts';
-		const indexTargetFile = 'dist/index.d.ts';
-
-		if (existsSync(indexSourceFile)) {
-			copyFileSync(indexSourceFile, indexTargetFile);
-			console.log(`Copied ${indexSourceFile} to ${indexTargetFile}`);
-		} else {
-			console.warn(`Warning: ${indexSourceFile} not found`);
 		}
 	}
 };
