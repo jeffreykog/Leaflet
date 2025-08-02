@@ -5,6 +5,7 @@ import json from '@rollup/plugin-json';
 import gitRev from 'git-rev-sync';
 import pkg from '../package.json';
 import {createBanner} from './banner';
+import {copyFileSync, existsSync} from 'fs';
 
 const release = process.env.NODE_ENV === 'release';
 const watch = process.argv.indexOf('-w') > -1 || process.argv.indexOf('--watch') > -1;
@@ -23,6 +24,22 @@ const outro = `if (typeof window !== 'undefined') {
 	window.L = exports;
 }`;
 
+// Plugin to copy TypeScript definitions
+const copyTypesPlugin = {
+	name: 'copy-types',
+	writeBundle() {
+		const sourceFile = 'src/leaflet.d.ts';
+		const targetFile = 'dist/leaflet.d.ts';
+
+		if (existsSync(sourceFile)) {
+			copyFileSync(sourceFile, targetFile);
+			console.log(`Copied ${sourceFile} to ${targetFile}`);
+		} else {
+			console.warn(`Warning: ${sourceFile} not found`);
+		}
+	}
+};
+
 /** @type {import('rollup').RollupOptions} */
 const config = {
 	input: 'src/Leaflet.js',
@@ -39,7 +56,8 @@ const config = {
 		}
 	],
 	plugins: [
-		release ? json() : rollupGitVersion()
+		release ? json() : rollupGitVersion(),
+		copyTypesPlugin
 	]
 };
 
