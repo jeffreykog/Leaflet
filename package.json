@@ -33,7 +33,6 @@
     "uglify-js": "^3.17.0"
   },
   "main": "dist/leaflet-src.js",
-  "exports": "./dist/leaflet-src.js",
   "module": "dist/leaflet-src.esm.js",
   "style": "dist/leaflet.css",
   "types": "dist/index.d.ts",

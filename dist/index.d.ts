@@ -3,4 +3,4 @@ export * from './leaflet.d.ts';
 
 // Default export for bundler compatibility
 import * as L from './leaflet.d.ts';
-export default L;
+export default L; 
