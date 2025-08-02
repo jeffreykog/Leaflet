@@ -1,5 +1,5 @@
 /* @preserve
- * Leaflet 1.9.4+v1-esm.f74c418, a JS library for interactive maps. https://leafletjs.com
+ * Leaflet 1.9.4+v1-esm.72a825e, a JS library for interactive maps. https://leafletjs.com
  * (c) 2010-2025 Vladimir Agafonkin, (c) 2010-2011 CloudMade
  */
 
@@ -9,7 +9,7 @@
   (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.leaflet = {}));
 })(this, (function (exports) { 'use strict';
 
-  var version = "1.9.4+v1.c511e66c";
+  var version = "1.9.4+v1.b9382535";
 
   /*
    * @namespace Util
