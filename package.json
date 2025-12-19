@@ -36,6 +36,14 @@
   "module": "dist/leaflet-src.esm.js",
   "style": "dist/leaflet.css",
   "types": "dist/leaflet.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/leaflet.d.ts",
+      "import": "./dist/leaflet-src.esm.js",
+      "require": "./dist/leaflet-src.js"
+    },
+    "./dist/*": "./dist/*"
+  },
   "files": [
     "dist",
     "src",
